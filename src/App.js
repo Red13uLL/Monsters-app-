@@ -1,6 +1,7 @@
 import { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+// moram da napravim pauzu sa monsterima-nastavi od promises html
 
 class App extends Component {
   constructor() {
