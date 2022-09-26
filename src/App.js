@@ -1,7 +1,6 @@
 import { Component } from 'react';
 import './App.css';
-
-// moram da napravim pauzu sa monsterima-nastavi od promises html
+import CardList from './components/card-list/card-list.component';
 
 class App extends Component {
   constructor() {
@@ -20,9 +19,7 @@ class App extends Component {
           () => {
             return { monsters: users };
           },
-          () => {
-            console.log(this.state);
-          },
+          () => {},
         ),
       ),
     );
@@ -36,8 +33,6 @@ class App extends Component {
   };
 
   render() {
-    console.log('render');
-
     const { monsters, searchField } = this.state;
     const { onSearchChange } = this;
     const filteredMonsters = monsters.filter((monster) => {
@@ -51,13 +46,14 @@ class App extends Component {
           placeholder="search monsters"
           onChange={onSearchChange}
         />
-        {filteredMonsters.map((monster) => {
+        {/* {filteredMonsters.map((monster) => {
           return (
             <div key={monster.id}>
               <h1>{monster.name}</h1>
             </div>
           );
-        })}
+        })} */}
+        <CardList monsters={filteredMonsters} />
       </div>
     );
   }
