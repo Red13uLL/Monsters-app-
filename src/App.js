@@ -8,7 +8,7 @@ const App = () => {
   const [monsters, setMonsters] = useState([]);
 
   useEffect(() => {
-    1;
+    git;
     fetch('https://jsonplaceholder.typicode.com/users')
       .then((response) => response.json())
       .then((users) => setMonsters(users));
